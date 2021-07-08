@@ -22,7 +22,7 @@
 
 1. you need to require the package with composer.
 
-`composer require flutterwave/laravelrave`
+`composer require flutterwavedev/flutterwavelaravel`
 
 2. make sure your register the service provider. Open up config/app.php and add the providers array.
 
