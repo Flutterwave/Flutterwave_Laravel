@@ -1,5 +1,5 @@
 {
-    "name": "flutterwave/flutterwavelaravel",
+    "name": "flutterwavedev/flutterwavelaravel",
     "description": "The Official Laravel Package for Flutterwave",
     "keywords": ["php","github", "laravel","Open Source","payments", "Flutterwave", "Flutterwave","laravel 5"],
     "license": "MIT",
