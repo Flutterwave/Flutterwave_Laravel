@@ -1,6 +1,6 @@
 <?php
 
-namespace KingFlamez\Rave;
+namespace Flutterwave\Rave;
 
 use stdClass;
 use Unirest\Request;
@@ -11,7 +11,7 @@ use Illuminate\Http\Request as LaravelRequest;
 
 /**
  * Flutterwave's Rave payment laravel package
- * @author Oluwole Adebiyi - Flamez <flamekeed@gmail.com>
+ * @author Flutterwave Developers <developers@flutterwavego.com>
  * @version 1.2
  **/
 
@@ -174,9 +174,10 @@ class Rave {
         echo '<script>';
         echo 'document.addEventListener("DOMContentLoaded", function(event) {';
         echo 'var data = JSON.parse(\'' . $json . '\');';
+        echo 'data.onclose = () => { window.location="'.$_SERVER['HTTP_REFERER'].'" };';
         echo 'getpaidSetup(data);';
         echo '});';
-        echo '</script>';
+        echo '</script>'; 
         echo '</body>';
         echo '</html>';
 

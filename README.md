@@ -1,66 +1,55 @@
-# Flutterwave Rave (Laravel 5 Package)
+# The Official Flutterwave Laravel Package
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
+
 <!-- [![Build Status][ico-travis]][link-travis]
 [![Scrutinizer Code Quality][ico-code-quality]][link-code-quality]
 [![Code Coverage][ico-coverage]][link-coverage]
 [![Code Intelligence Status][ico-code-intelligence]][link-code-intelligence] -->
 
-> Implement Flutterwave Rave payment gateway easily with Laravel
+> Integrate Flutterwave payment gateway easily with Laravel
 
-- Go to [Flutterwave Rave Live](https://rave.flutterwave.com/) to get your **`LIVE`** public and private key
-- Go to [Flutterwave Rave Sandbox](https://ravesandbox.flutterwave.com/) to get your **`TEST`** public and private key
-
+-   Go to [Flutterwave Rave Live](https://rave.flutterwave.com/) to get your **`LIVE`** public and private key
+-   Go to [Flutterwave Rave Sandbox](https://ravesandbox.flutterwave.com/) to get your **`TEST`** public and private key
 
 ## Documentation
 
-> ### A friendly documentation can be found [here](https://laravelrave.netlify.com/)
+1. you need to require the package with composer.
 
+`composer require flutterwave/laravelrave`
 
-> ### A sample implementation can be found [here](https://github.com/kingflamez/laravelrave-implementation/)
+2. make sure your register the service provider. Open up config/app.php and add the providers array.
 
+`Flutterwave\Rave\RaveServiceProvider::class`
+
+3. make sure you add Flutterwave to the aliases
+
+`'Flutterwave' => KingFlamez\Rave\Facades\Rave::class`
+
+4. run the command on your terminal
+
+`php artisan vendor:publish --provider="Flutterwave\Rave\RaveServiceProvider"`
+
+##Sample Project using this package
+
+find a sample project [here](https://github.com/bajoski34/flwstore)
 
 ## ToDo
 
- - Support Direct Charges
- - Support Tokenized payment
-
+-   Support Direct Charges
+-   Support Tokenized payment
 
 ## Credits
 
-- [Oluwole Adebiyi (Flamez)][link-author]
-- [Emmanuel Okeke](https://github.com/emmanix2002)
-- [Adebayo Mustafa](https://github.com/AdebsAlert)
-- [Tunde Aromire](https://github.com/toondaey)
-- [Ifunanya Ikemma](https://github.com/Iphytech)
-- [Abhishek Prakash](https://github.com/abhishek6262)
-
-## Contributing
-Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities. I will appreciate that a lot. Also please add your name to the credits.
-
-Kindly [follow me on twitter](https://twitter.com/mrflamez_)!
+-   [Oluwole Adebiyi (Flamez)][link-author]
+-   [Emmanuel Okeke](https://github.com/emmanix2002)
+-   [Adebayo Mustafa](https://github.com/AdebsAlert)
+-   [Tunde Aromire](https://github.com/toondaey)
+-   [Ifunanya Ikemma](https://github.com/Iphytech)
+-   [Abhishek Prakash](https://github.com/abhishek6262)
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/kingflamez/laravelrave.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-<!-- [ico-travis]: https://travis-ci.org/toondaey/laravelrave.svg?branch=master -->
-<!-- [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/kingflamez/laravelrave.svg?style=flat-square -->
-<!-- [ico-code-quality]: https://scrutinizer-ci.com/g/toondaey/laravelrave/badges/quality-score.png?b=master -->
-<!-- [ico-code-intelligence]: https://scrutinizer-ci.com/g/toondaey/laravelrave/badges/code-intelligence.svg?b=master -->
-<!-- [ico-coverage]: https://scrutinizer-ci.com/g/toondaey/laravelrave/badges/coverage.png?b=master -->
-[ico-downloads]: https://img.shields.io/packagist/dt/kingflamez/laravelrave.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/kingflamez/laravelrave
-[link-travis]: https://travis-ci.org/toondaey/laravelrave
-[link-scrutinizer]: https://scrutinizer-ci.com/g/kingflamez/laravelrave/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/toondaey/laravelrave/?branch=master
-[link-downloads]: https://packagist.org/packages/kingflamez/laravelrave
-[link-author]: https://github.com/kingflamez
-[link-contributors]: ../../contributors
-[link-coverage]: https://scrutinizer-ci.com/g/toondaey/laravelrave/?branch=master
-[link-code-intelligence]: https://scrutinizer-ci.com/code-intelligence

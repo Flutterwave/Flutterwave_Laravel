@@ -1,6 +1,6 @@
 <?php
 
-namespace KingFlamez\Rave;
+namespace Flutterwave\Rave;
 
 use Unirest\Request;
 use Unirest\Request\Body;
